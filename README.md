@@ -5,7 +5,7 @@ Lista de tarefas que possibilita adicionar, remover e editar tarefas.
 
 ## Preview 
 
-<img width="1200" height="600" src="src/assets/to_readme/preview.png">
+<img width="1600" height="600" src="src/assets/to_readme/preview.png">
 
 ## Tecnologias utilizadas 
 - HTML
