@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+:root{
+    --backgroundColor: #e56b6f;
+    --mainColor: #0d00a4;
+    --lightColor: #ffffff;
+    --lineColor: #ced4da;
+    --ShadowOne: rgba(0, 0, 0, 0.2);
+    --ShadowTwo: rgba(0, 0, 0, 0.19);
+    --greenColor: #52b788;
+    --redColor: #ff595e;
+    --yellowColor: #ffca3a;
+    --editBGColor: #e9ecef;
+    --editFontColor: #757575;
+}
+
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: var(--backgroundColor);
+    
+}
+
+.all-content{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5% 0;
+}
+
+header, main, footer{
+    box-shadow: 0 4px 8px 0 var(--ShadowOne), 0 6px 20px 0 var(--ShadowTwo);
+}
+
+header{
+    background-color: var(--lightColor);
+    color: black;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+header h1{
+    margin-right: 4rem;
+}
+
+.header-div{
+    display: grid;
+    grid-template-columns: 1fr 2fr .125fr;
+    justify-content: space-between;
+}
+
+main{
+    padding: 1.5rem 1rem;
+    background-color: var(--lightColor);
+    text-align: left;
+}
+
+footer{
+    border-top: 3px solid var(--lineColor);
+    padding: 1rem 2rem;
+    background-color: var(--lightColor);
+}
+
+.footer-div{
+    display: grid;
+    grid-template-columns: 2fr .25fr;
+    justify-content: space-between;
+}
+
+.footer-div h3{
+    font-size: 1.5rem;
+}
+
+.remove-all{
+    border: none;
+    background: none;
+    color: var(--editFontColor);
+    font-size: 1.125rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    transition: .3s;
+}
+
+.remove-all:hover{
+    color: var(--redColor);
+}
+
+input{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.element-div{
+    display: grid;
+    grid-template-columns: 2fr 0.125fr 0.125fr 0.125fr;
+    padding: .5rem 0;
+    border-bottom: 2px solid var(--lineColor);
+}
+
+.item, .checked{
+    flex: 1 1 0%;
+    font-size: 2rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+
+.item{
+    color: black;
+    transition: 0.4s;
+}
+
+.checked{
+    color: var(--editFontColor);
+    text-decoration: line-through;
+    transition: 0.3s;
+}
+
+.item:not(:read-only), .checked:not(:read-only)
+{
+    background-color: var(--editBGColor);
+    color: var(--editFontColor);
+}
+
+.btn{
+    margin: 0.2rem;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.remove, .alter, .checkbox{
+    border: 0;
+    padding: 0.5rem;
+    background: none;
+    font-size: 1.75rem;
+    transition: 0.3s;
+}
+
+.remove, .alter, .add, .checkbox{
+    color: var(--lineColor);
+}
+
+.remove:hover{
+    color: var(--redColor);
+}
+
+.alter:hover{
+    color: var(--yellowColor);
+}
+
+.checkbox:hover{
+    color: #7fc8f8;
+}
+
+.form-container{
+    display: grid;
+    grid-template-columns: 2fr 0.125fr;
+}
+
+.add{
+    margin-left: 1rem;
+    border: 0;
+    padding: 0.5rem 1rem;
+    background: none;
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+.add:hover{
+    color: var(--greenColor);
+}
+
+.new-element{
+    font-size: 1.5rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-bottom: 0.1rem solid var(--lineColor);
+    padding-left: 1rem;
+}
+
+#original{
+    display: none;
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 770px){
+    
+    header{
+        font-size: 1rem;
+    }
+
+    .add, .alter, .remove, .checkbox, .new-element, .item{
+        font-size: 1.25rem;
+    }
+
+    .footer-div h3{
+        font-size: 1.25rem;
+    }
+
+    .remove-all{
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 430px){
+    
+    header{
+        font-size: 0.7rem;
+    }
+
+    header h1{
+        margin-right: 0.5rem;
+    }
+
+    .new-element{
+        font-size: 0.85rem;
+    }
+
+    .alter, .remove, .checkbox, .add, .item{
+        font-size: 1rem;
+    }
+
+    .footer-div h3{
+        font-size: 1rem;
+    }
+
+    .remove-all{
+        font-size: 0.8rem;
+    }
+
+    .footer-div{
+        display: grid;
+        grid-template-columns: 2fr .5fr;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 380px){
+    
+    header{
+        font-size: .5rem;
+    }
+
+    .new-element{
+        font-size: 0.7rem;
+    }
+
+    .footer-div h3{
+        font-size: .75rem;
+    }
+
+    .remove-all{
+        font-size: .65rem;
+    }
+}
+
+@media screen and (max-width: 330px){
+
+    .new-element, .add{
+        font-size: .5rem;
+    }
+
+    .alter, .remove, .checkbox, .item{
+        font-size: .85rem;
+    }
+
+    .footer-div h3{
+        font-size: .85rem;
+    }
+
+    .remove-all{
+        font-size: .55rem;
+    }
+}

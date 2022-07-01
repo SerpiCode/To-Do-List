@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>To-Do List</title>
+    
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+    <div class="all-content">
+
+        <header>
+            
+            <div class="header-div">
+
+                <div class="title">
+                
+                    <h1>TO-DO LIST</h1>
+                
+                </div>
+                
+                <div class="add-form">
+    
+                    <form action="get" class="form-container">
+    
+                        <input type="text" class="new-element" placeholder="Add something" required>
+                        <button type="submit" class="btn add"><i class="fa-solid fa-plus"></i></button>
+        
+                    </form>
+                
+                </div>
+
+            </div>
+        
+        </header>
+
+        <main class="main-content">
+
+            <div class="element-div" id="original">
+                
+                <input type="text" class="item" value="" readonly>
+            
+                <button type="button" class="btn checkbox"><i class="fa-regular fa-square-check"></i></button>
+                <button type="button" class="btn remove"><i class="fa-regular fa-trash-can"></i></button>
+                <button type="button" class="btn alter"><i class="fa-solid fa-pen-to-square"></i></button>
+            
+            </div>
+
+        </main>
+
+        <footer>
+
+            <div class="footer-div">
+                
+                <h3 class="current-tasks">You have 3 pending tasks.</h3>
+                <button class="btn remove-all">Remove all</button>
+            
+            </div>
+
+        </footer>
+
+    </div>
+
+  </body>
+  <script src="https://kit.fontawesome.com/da711f5efc.js" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</html>
